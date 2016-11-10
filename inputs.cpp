@@ -7,7 +7,6 @@
 using namespace std;
 
 string  name = "input", filename;
-char N[10];
 
 int main()
 {
@@ -21,6 +20,8 @@ int main()
 		{
 			filename = filename + to_string(i); // files input10 and more
 		}
+		filename += ".txt";
+		filename = "TESTS/input/" + filename;
 		freopen(filename.c_str(), "w", stdout); // create filename
 		cout << rand() % 100 + 1 << ' ' << rand() % 100 + 1;  // add two numbers
 	}

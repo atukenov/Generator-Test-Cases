@@ -22,7 +22,7 @@ int solve(int n, int m)
 int main()
 {
 	srand(time(NULL)); 
-	for (int i = 2; i <= 20; ++i)
+	for (int i = 0; i <= 20; ++i)
 	{
 		filename = "input";
 		outputname = "output";
@@ -36,10 +36,12 @@ int main()
 			filename = filename + to_string(i),
 			outputname = outputname + to_string(i);	 // files input10 and more
 		}
-		filename = "TESTS/" + filename;
-		outputname = "TESTS/" + outputname;
+		filename = "TESTS/input/" + filename + ".txt";
+		outputname = "TESTS/output/" + outputname + ".txt";
 		freopen(filename.c_str(), "r", stdin); // create filename
 		freopen(outputname.c_str(), "w", stdout); // create output with answer
+
+
 		// --------YOUR SOLUTION ACCEPTED SOLUTION------------------
 		scanf("%d %d\n", &n, &m);
     	cout << solve(n, m) << endl;
